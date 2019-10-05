@@ -6,9 +6,9 @@ Gem::Specification.new do |s|
   s.version = ChefZero::VERSION
   s.summary = "Self-contained, easy-setup, fast-start in-memory Chef server for testing and solo setup purposes"
   s.description = s.summary
-  s.author = "Chef Software, Inc."
-  s.email = "oss@chef.io"
-  s.homepage = "https://github.com/chef/chef-zero"
+  s.author = ["Chef Software, Inc.", "Cinc Project"]
+  s.email = ["oss@chef.io", "maintainers@cinc.sh"]
+  s.homepage = "https://gitlab.com/cinc-project/chef-zero"
   s.license = "Apache-2.0"
 
   s.required_ruby_version = ">= 2.6"
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "webrick"
 
   s.bindir       = "bin"
-  s.executables  = ["chef-zero"]
+  s.executables  = ["cinc-zero"]
   s.require_path = "lib"
   s.files = %w{LICENSE Gemfile Rakefile} + Dir.glob("*.gemspec") +
     Dir.glob("{lib,spec}/**/*", File::FNM_DOTMATCH).reject { |f| File.directory?(f) }
