@@ -1,0 +1,13 @@
+image: cincproject/omnibus-debian
+stages:
+ - test
+ - publish
+
+test:
+  stage: test
+  tags:
+    - osuosl
+  script:
+    - source /home/omnibus/load-omnibus-toolchain.sh
+    - bundle install --with development
+    - bundle exec rake
