@@ -1,9 +1,9 @@
 module ChefZero
   class Dist
     # When referencing a product directly
-    PRODUCT = "Chef Zero".freeze
+    PRODUCT = "Cinc Zero".freeze
 
     # The binary alias
-    CLIENT = "chef-zero".freeze
+    CLIENT = "cinc-zero".freeze
   end
 end
