@@ -21,12 +21,14 @@ group :style do
   gem "cookstyle", "~> 8.6"
 end
 
-if ENV["GEMFILE_MOD"]
-  puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
-  instance_eval(ENV["GEMFILE_MOD"])
-else
-  gem "chef", "~> 18.7"
-  gem "ohai", "~> 18.1"
+group :chef do
+  if ENV["GEMFILE_MOD"]
+    puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
+    instance_eval(ENV["GEMFILE_MOD"])
+  else
+    gem "chef", "~> 18.7"
+    gem "ohai", "~> 18.1"
+  end
 end
 
 group :debug do
