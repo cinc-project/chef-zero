@@ -89,7 +89,7 @@ describe ChefZero::Server do
       end
 
       it "accepts /version" do
-        expect(get_version.body.start_with?("chef-zero")).to be true
+        expect(get_version.body.start_with?("cinc-zero")).to be true
       end
     end
   end
