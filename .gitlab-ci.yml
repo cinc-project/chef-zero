@@ -1,13 +1,15 @@
 image: cincproject/omnibus-debian
 stages:
- - test
- - publish
+  - publish
 
-test:
-  stage: test
+publish-gems:
+  stage: publish
+  # Only run if this is triggered from the web
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: on_success
+    - when: never
   tags:
-    - osuosl
+    - docker-x86_64
   script:
-    - source /home/omnibus/load-omnibus-toolchain.sh
-    - bundle install --with development
-    - bundle exec rake
+    - bash publish-gems.sh
