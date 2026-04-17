@@ -4,7 +4,7 @@ require "chef_zero/version"
 Gem::Specification.new do |s|
   s.name = "chef-zero"
   s.version = ChefZero::VERSION
-  s.summary = "Self-contained, easy-setup, fast-start in-memory Chef server for testing and solo setup purposes"
+  s.summary = "Self-contained, easy-setup, fast-start in-memory Cinc server for testing and solo setup purposes"
   s.description = s.summary
   s.author = ["Chef Software, Inc.", "Cinc Project"]
   s.email = ["oss@chef.io", "maintainers@cinc.sh"]
